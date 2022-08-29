@@ -1,0 +1,66 @@
+{
+  "name": "tap-tap",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/bundle/tap-tap.common.js",
+  "module": "dist/bundle/tap-tap.module.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+
+    "lint": "standard src/",
+    "fix": "standard src/ --fix",
+
+    "test": "web-test-runner",
+
+      "test:ci": "pnpm lint && pnpm build && web-test-runner",
+
+    "test:watch": "web-test-runner --watch",
+    "build": "rm -rf dist && node esbuild.config.js",
+
+    "start:example": "web-dev-server",
+    "build:example": "npx pnpm build && rm -rf examples/dist && cp -R dist/ examples/dist",
+    "start": "pnpm build -- --watch",
+    "deploy": "pnpm build && pnpm build:types && standard-version --release-as",
+    "deploy:beta": "pnpm build && pnpm build:types && standard-version --prerelease beta",
+    "deploy:patch": "pnpm build && pnpm build:types && standard-version --release-as patch",
+    "deploy:minor": "pnpm build && pnpm build:types && standard-version --release-as minor",
+    "deploy:major": "pnpm build && pnpm build:types && standard-version --release-as major",
+    "push": "git push --follow-tags origin main && pnpm publish"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "devDependencies": {
+    "@esm-bundle/chai": "*",
+    "@open-wc/testing": "*",
+    "@types/sinon": "*",
+    "@types/sinon-chai": "*",
+    "@web/dev-server": "*",
+    "@web/dev-server-esbuild": "*",
+    "@web/test-runner": "*",
+    "@web/test-runner-mocha": "*",
+    "@web/test-runner-playwright": "*",
+    "esbuild": "*",
+    "glob": "*",
+    "eslint": "*",
+    "playwright": "*",
+    "sinon": "*",
+    "standard": "*"
+  },
+  "repository": "git@github.com:ParamagicDev/tap-tap.git",
+  "bugs": {
+    "url": "https://github.com/paramagicdev/tap-tap/issues"
+  },
+  "homepage": "https://github.com/paramagicdev/tap-tap",
+  "author": "ParamagicDev <konnor5456@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
