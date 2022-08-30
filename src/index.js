@@ -6,7 +6,6 @@ export function tap (context, callback) {
   return context
 }
 
-
 /**
  * @type {import("./index").tapAsync}
  */
