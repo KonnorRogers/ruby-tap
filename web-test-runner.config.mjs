@@ -11,8 +11,8 @@ export default ({
   rootDir: '.',
 
   plugins: [
-    
+
     esbuildPlugin()
-    
+
   ]
 })
