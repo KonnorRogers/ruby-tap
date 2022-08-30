@@ -12,6 +12,7 @@
     "test:ci": "pnpm lint && pnpm build && web-test-runner",
     "test:watch": "web-test-runner --watch",
     "build": "rm -rf dist && node esbuild.config.js",
+    "build:types": "tsc",
     "start": "pnpm build -- --watch",
     "deploy": "pnpm build && pnpm build:types && standard-version --release-as",
     "deploy:beta": "pnpm build && pnpm build:types && standard-version --prerelease beta",

@@ -18,9 +18,9 @@ describe("tapAsync()", () => {
     const obj = { hi: "there" }
     await tapAsync(obj, async () => {
       await fetch("/");
-      obj.blah = "foo"
+      obj.hi = "foo"
     })
 
-    assert(obj.blah === "foo")
+    assert(obj.hi === "foo")
   })
 })
