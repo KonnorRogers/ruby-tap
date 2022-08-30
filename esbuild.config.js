@@ -4,13 +4,15 @@ import esbuild from "esbuild"
 
 ;(async function () {
   let entries = glob
-    .sync("src/**/*.{ts,js}")
+    .sync("src/**/*.js")
     .map((file) => {
       return path.join(path.dirname(file), path.basename(file, path.extname(file)))
     });
 
+  console.log(entries)
+
   const defaultConfig = {
-    entryPoints: ["./src/index.ts"],
+    entryPoints: ["./src/index.js"],
     sourcemap: true,
     platform: "browser",
     target: "es2018",
