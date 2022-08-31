@@ -18,7 +18,7 @@ import rubyTap from "ruby-tap";
 rubyTap.install()
 
 console.log(
-  const div = document.createElement("button").tap(button) => {
+  const button = document.createElement("button").tap((button) => {
     button.type = "submit"
     button.addEventListener("click", () => console.log("submitting!"))
   })
