@@ -1,6 +1,6 @@
 {
   "name": "ruby-tap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "dist/bundle/ruby-tap.common.js",
   "module": "dist/bundle/ruby-tap.module.js",
@@ -42,7 +42,8 @@
     "eslint": "*",
     "playwright": "*",
     "sinon": "*",
-    "standard": "*"
+    "standard": "*",
+    "standard-version": "*"
   },
   "repository": "git@github.com:ParamagicDev/ruby-tap.git",
   "bugs": {
@@ -51,9 +52,7 @@
   "homepage": "https://github.com/paramagicdev/ruby-tap",
   "author": "ParamagicDev <konnor5456@gmail.com>",
   "license": "MIT",
-  "keywords": [
-
-  ],
+  "keywords": [],
   "publishConfig": {
     "access": "public"
   }
