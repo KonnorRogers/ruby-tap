@@ -1,10 +1,12 @@
 function install () {
+  /* eslint-disable */
   Object.prototype.tap = function (callback) {
-    if (callback) {
+    if (typeof callback === "function") {
       callback(this)
     }
     return this
   }
+  /* eslint-enable */
 }
 
 export default { install }

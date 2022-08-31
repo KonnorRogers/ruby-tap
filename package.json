@@ -1,9 +1,9 @@
 {
-  "name": "tap-tap",
+  "name": "ruby-tap",
   "version": "1.0.0",
   "type": "module",
-  "main": "dist/bundle/tap-tap.common.js",
-  "module": "dist/bundle/tap-tap.module.js",
+  "main": "dist/bundle/ruby-tap.common.js",
+  "module": "dist/bundle/ruby-tap.module.js",
   "scripts": {
     "clean": "rm -rf dist",
     "lint": "standard src/",
@@ -44,11 +44,11 @@
     "sinon": "*",
     "standard": "*"
   },
-  "repository": "git@github.com:ParamagicDev/tap-tap.git",
+  "repository": "git@github.com:ParamagicDev/ruby-tap.git",
   "bugs": {
-    "url": "https://github.com/paramagicdev/tap-tap/issues"
+    "url": "https://github.com/paramagicdev/ruby-tap/issues"
   },
-  "homepage": "https://github.com/paramagicdev/tap-tap",
+  "homepage": "https://github.com/paramagicdev/ruby-tap",
   "author": "ParamagicDev <konnor5456@gmail.com>",
   "license": "MIT",
   "keywords": [
