@@ -26,15 +26,15 @@ console.log(
 // => <HTMLButtonElement>
 
 "1,2,3,4,5,6,7,8,9,10"                      .tap((x) => console.log(`original: ${x}`))
-  .split(`,`)                               .tap((x) => console.log(`array:    ${x}`))
+  .split(`,`).map(Number)                   .tap((x) => console.log(`array:    ${x}`))
   .filter ((x) => x % 2 == 0)               .tap((x) => console.log(`evens:    ${x}`))
-  .map ((x) => x*x }                        .tap((x) => console.log(`squares:  ${x}`))
+  .map ((x) => x*x)                         .tap((x) => console.log(`squares:  ${x}`))
 
 /*
 [LOG]: "original: 1,2,3,4,5,6,7,8,9,10"
-[LOG]: "array:    1,2,3,4,5,6,7,8,9,10"
-[LOG]: "evens:    2,4,6,8,10"
-[LOG]: "squares:  4,16,36,64,100"
+[LOG]: "array:    [1,2,3,4,5,6,7,8,9,10]"
+[LOG]: "evens:    [2,4,6,8,10]"
+[LOG]: "squares:  [4,16,36,64,100]"
 [LOG]: [4, 16, 36, 64, 100]
 */
 ```
