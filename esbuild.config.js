@@ -27,14 +27,14 @@ import esbuild from "esbuild"
   await Promise.all[
     esbuild.build({
       ...defaultConfig,
-      outfile: "dist/bundle/tap-tap.common.js",
+      outfile: "dist/bundle/ruby-tap.common.js",
       format: "cjs",
       minify: true,
     }),
 
     esbuild.build({
       ...defaultConfig,
-      outfile: "dist/bundle/tap-tap.module.js",
+      outfile: "dist/bundle/ruby-tap.module.js",
       format: "esm",
       minify: true,
     }),
